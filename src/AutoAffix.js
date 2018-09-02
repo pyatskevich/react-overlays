@@ -1,5 +1,6 @@
 import getOffset from 'dom-helpers/query/offset';
 import requestAnimationFrame from 'dom-helpers/util/requestAnimationFrame';
+import PropTypes from 'prop-types';
 import React from 'react';
 import mountable from 'react-prop-types/lib/mountable';
 
@@ -153,14 +154,14 @@ AutoAffix.propTypes = {
    * The logical container node or component for determining offset from bottom
    * of viewport, or a function that returns it
    */
-  container: React.PropTypes.oneOfType([
+  container: PropTypes.oneOfType([
     mountable,
-    React.PropTypes.func
+    PropTypes.func
   ]),
   /**
    * Automatically set width when affixed
    */
-  autoWidth: React.PropTypes.bool
+  autoWidth: PropTypes.bool
 };
 
 // This intentionally doesn't inherit default props from `<Affix>`, so that the

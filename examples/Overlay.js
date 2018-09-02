@@ -70,13 +70,10 @@ const ToolTip = props => {
   );
 };
 
-const OverlayExample = React.createClass({
+class OverlayExample extends React.Component {
+  state = { show: false };
 
-  getInitialState(){
-    return { show: false };
-  },
-
-  toggle(){
+  toggle = () => {
     let show = this.state.show;
     let placements = ['left', 'top', 'right', 'bottom'];
     let placement = this.state.placement;
@@ -92,9 +89,9 @@ const OverlayExample = React.createClass({
     }
 
     return this.setState({ show, placement });
-  },
+  };
 
-  render(){
+  render() {
 
     return (
       <div className='overlay-example'>
@@ -119,6 +116,6 @@ const OverlayExample = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default OverlayExample;

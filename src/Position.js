@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
@@ -132,27 +133,27 @@ Position.propTypes = {
    * Function mapping props to a DOM node the component is positioned next to
    *
    */
-  target: React.PropTypes.func,
+  target: PropTypes.func,
 
   /**
    * "offsetParent" of the component
    */
-  container: React.PropTypes.oneOfType([
+  container: PropTypes.oneOfType([
     mountable,
-    React.PropTypes.func
+    PropTypes.func
   ]),
   /**
    * Minimum spacing in pixels between container border and component border
    */
-  containerPadding: React.PropTypes.number,
+  containerPadding: PropTypes.number,
   /**
    * How to position the component relative to the target
    */
-  placement: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   /**
    * Whether the position should be changed on each update
    */
-  shouldUpdatePosition: React.PropTypes.bool
+  shouldUpdatePosition: PropTypes.bool
 };
 
 Position.displayName = 'Position';

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -112,12 +113,12 @@ export default class RootCloseWrapper extends React.Component {
 RootCloseWrapper.displayName = 'RootCloseWrapper';
 
 RootCloseWrapper.propTypes = {
-  onRootClose: React.PropTypes.func.isRequired,
+  onRootClose: PropTypes.func.isRequired,
 
   /**
    * Passes the suppress click handler directly to the child component instead
    * of placing it on a wrapping div. Only use when you can be sure the child
    * properly handle the click event.
    */
-  noWrap: React.PropTypes.bool
+  noWrap: PropTypes.bool
 };

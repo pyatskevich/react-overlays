@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { findDOMNode } from 'react-dom';
 import Button from 'react-bootstrap/lib/Button';
@@ -30,10 +31,11 @@ let scope = {
   React, findDOMNode, Button, injectCss, ...ReactOverlays, getOffset
 };
 
-const Anchor = React.createClass({
-  propTypes: {
-    id: React.PropTypes.string
-  },
+class Anchor extends React.Component {
+  static propTypes = {
+    id: PropTypes.string
+  };
+
   render() {
     let id = this.props.id || this.props.children.toLowerCase().replace(/\s+/gi, '_');
 
@@ -44,12 +46,13 @@ const Anchor = React.createClass({
       </a>
     );
   }
-});
+}
 
-const ExampleEditor = React.createClass({
-  propTypes: {
-    codeText: React.PropTypes.string
-  },
+class ExampleEditor extends React.Component {
+  static propTypes = {
+    codeText: PropTypes.string
+  };
+
   render() {
     return (
       <Editor
@@ -63,10 +66,9 @@ const ExampleEditor = React.createClass({
       />
     );
   }
-});
+}
 
-const Example = React.createClass({
-
+class Example extends React.Component {
   render() {
 
     return (
@@ -157,6 +159,6 @@ const Example = React.createClass({
       </div>
     );
   }
-});
+}
 
 React.render(<Example/>, document.getElementById('app-container'));

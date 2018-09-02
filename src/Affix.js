@@ -4,6 +4,7 @@ import getOffset from 'dom-helpers/query/offset';
 import getOffsetParent from 'dom-helpers/query/offsetParent';
 import getScrollTop from 'dom-helpers/query/scrollTop';
 import requestAnimationFrame from 'dom-helpers/util/requestAnimationFrame';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -180,46 +181,46 @@ Affix.propTypes = {
   /**
    * Pixels to offset from top of screen when calculating position
    */
-  offsetTop: React.PropTypes.number,
+  offsetTop: PropTypes.number,
   /**
    * When affixed, pixels to offset from top of viewport
    */
-  viewportOffsetTop: React.PropTypes.number,
+  viewportOffsetTop: PropTypes.number,
   /**
    * Pixels to offset from bottom of screen when calculating position
    */
-  offsetBottom: React.PropTypes.number,
+  offsetBottom: PropTypes.number,
   /**
    * CSS class or classes to apply when at top
    */
-  topClassName: React.PropTypes.string,
+  topClassName: PropTypes.string,
   /**
    * Style to apply when at top
    */
-  topStyle: React.PropTypes.object,
+  topStyle: PropTypes.object,
   /**
    * CSS class or classes to apply when affixed
    */
-  affixClassName: React.PropTypes.string,
+  affixClassName: PropTypes.string,
   /**
    * Style to apply when affixed
    */
-  affixStyle: React.PropTypes.object,
+  affixStyle: PropTypes.object,
   /**
    * CSS class or classes to apply when at bottom
    */
-  bottomClassName: React.PropTypes.string,
+  bottomClassName: PropTypes.string,
   /**
    * Style to apply when at bottom
    */
-  bottomStyle: React.PropTypes.object,
+  bottomStyle: PropTypes.object,
 
-  onAffix: React.PropTypes.func,
-  onAffixed: React.PropTypes.func,
-  onAffixTop: React.PropTypes.func,
-  onAffixedTop: React.PropTypes.func,
-  onAffixBottom: React.PropTypes.func,
-  onAffixedBottom: React.PropTypes.func
+  onAffix: PropTypes.func,
+  onAffixed: PropTypes.func,
+  onAffixTop: PropTypes.func,
+  onAffixedTop: PropTypes.func,
+  onAffixBottom: PropTypes.func,
+  onAffixedBottom: PropTypes.func
 };
 
 Affix.defaultProps = {

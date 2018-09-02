@@ -19,17 +19,14 @@ injectCss(`
 `);
 
 
-const TransitionExample = React.createClass({
+class TransitionExample extends React.Component {
+  state = { in: true };
 
-  getInitialState(){
-    return { in: true };
-  },
-
-  toggle(){
+  toggle = () => {
     return this.setState({ in: !this.state.in });
-  },
+  };
 
-  render(){
+  render() {
 
     return (
       <div className='transition-example'>
@@ -57,6 +54,6 @@ const TransitionExample = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default TransitionExample;

@@ -36,11 +36,8 @@ const dialogStyle = function() {
 };
 
 
-const ModalExample = React.createClass({
-
-  getInitialState(){
-    return { showModal: false };
-  },
+class ModalExample extends React.Component {
+  state = { showModal: false };
 
   render() {
 
@@ -66,15 +63,15 @@ const ModalExample = React.createClass({
         </Modal>
       </div>
     );
-  },
-
-  close(){
-    this.setState({ showModal: false });
-  },
-
-  open(){
-    this.setState({ showModal: true });
   }
-});
+
+  close = () => {
+    this.setState({ showModal: false });
+  };
+
+  open = () => {
+    this.setState({ showModal: true });
+  };
+}
 
 export default ModalExample;

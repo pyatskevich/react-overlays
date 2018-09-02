@@ -33,13 +33,13 @@ describe('Modal', function () {
   });
 
   it('Should disable scrolling on the modal container while open', function() {
-    let Container = React.createClass({
-      getInitialState() {
-        return { modalOpen: true };
-      },
-      handleCloseModal() {
+    class Container extends React.Component {
+      state = { modalOpen: true };
+
+      handleCloseModal = () => {
         this.setState({ modalOpen: false });
-      },
+      };
+
       render() {
         return (
           <div>
@@ -53,7 +53,7 @@ describe('Modal', function () {
           </div>
         );
       }
-    });
+    }
 
     let instance = render(<Container />, mountPoint);
     let modal = ReactTestUtils.findRenderedComponentWithType(instance, Modal);
@@ -67,13 +67,13 @@ describe('Modal', function () {
   });
 
   it('Should add and remove container classes', function() {
-    let Container = React.createClass({
-      getInitialState() {
-        return { modalOpen: true };
-      },
-      handleCloseModal() {
+    class Container extends React.Component {
+      state = { modalOpen: true };
+
+      handleCloseModal = () => {
         this.setState({ modalOpen: false });
-      },
+      };
+
       render() {
         return (
           <div>
@@ -88,7 +88,7 @@ describe('Modal', function () {
           </div>
         );
       }
-    });
+    }
 
     let instance = render(<Container />, mountPoint);
     let modal = ReactTestUtils.findRenderedComponentWithType(instance, Modal);

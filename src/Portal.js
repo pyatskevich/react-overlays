@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import mountable from 'react-prop-types/lib/mountable';
 import ownerDocument from './utils/ownerDocument';
@@ -9,7 +11,7 @@ import getContainer from './utils/getContainer';
  * You can think of it as a declarative `appendChild()`, or jQuery's `$.fn.appendTo()`.
  * The children of `<Portal/>` component will be appended to the `container` specified.
  */
-let Portal = React.createClass({
+let Portal = createReactClass({
 
   displayName: 'Portal',
 
@@ -18,9 +20,9 @@ let Portal = React.createClass({
      * A Node, Component instance, or function that returns either. The `container` will have the Portal children
      * appended to it.
      */
-    container: React.PropTypes.oneOfType([
+    container: PropTypes.oneOfType([
       mountable,
-      React.PropTypes.func
+      PropTypes.func
     ])
   },
 
