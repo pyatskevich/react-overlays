@@ -73,6 +73,7 @@
     "mocha": "^2.2.5",
     "mt-changelog": "^0.6.1",
     "node-libs-browser": "^0.5.2",
+    "prop-types": "^15.6.2",
     "raw-loader": "^0.5.1",
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
